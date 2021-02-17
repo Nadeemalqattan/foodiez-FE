@@ -35,6 +35,11 @@ const NavBar = () => {
                 Categories
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/ingredients" class="nav-link">
+                Ingredients
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { BsPlusCircle } from "react-icons/bs";
+import { BsFillPlusSquareFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Redirect, useParams } from "react-router-dom";
@@ -26,7 +26,7 @@ const CategoryDetail = () => {
       <CategoryList ingredients={ingredients} />
       {/* <UpdateButton ingredients={category.ingredients} /> */}
       <Link to={`/categorys/${category.id}/ingredients/new`}>
-        <BsPlusCircle className="float-right" size="2em" />
+        <BsFillPlusSquareFill className="float-right" size="2em" />
       </Link>
     </>
   );

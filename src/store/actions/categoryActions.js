@@ -22,7 +22,10 @@ export const updateCategory = (updatedCategory) => async (dispatch) => {
     const formData = new FormData();
     for (const key in updatedCategory)
       formData.append(key, updatedCategory[key]);
-    const res = await instance.put(`/data/${updatedCategory.id}`, formData);
+    const res = await instance.put(
+      `/categories/${updatedCategory.id}`,
+      formData
+    );
 
     dispatch({
       type: types.UPDATE_CATEGORY,

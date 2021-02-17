@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const CategoryList = (props) => {
-  const categories = useSelector((state) => state.category);
+  const categories = useSelector((state) => state.categoryReducer.category);
   const categoryList = categories.map((category) => (
     <CategoryItem category={category} key={category.id} />
   ));

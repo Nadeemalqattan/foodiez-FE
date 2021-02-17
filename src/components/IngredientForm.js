@@ -1,46 +1,49 @@
-import { addCategory, updateCategory } from "../store/actions/categoryActions";
+import {
+  addIngredient,
+  updateIngredient,
+} from "../store/actions/ingredientActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { useState } from "react";
 
-const CategoryForm = () => {
+const IngredientForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { categorySlug } = useParams();
-  const foundCategory = useSelector((state) =>
-    state.categoryReducer.category.find(
-      (category) => category.slug === categorySlug
+  const { ingredientSlug } = useParams();
+  const foundIngredient = useSelector((state) =>
+    state.ingredientReducer.ingredient.find(
+      (ingredient) => ingredient.slug === ingredientSlug
     )
   );
 
-  const [category, setCategory] = useState(
-    foundCategory ?? {
+  const [ingredient, setIngredient] = useState(
+    foundIngredient ?? {
       name: "",
       image: "",
     }
   );
 
   const handleChange = (event) =>
-    setCategory({ ...category, [event.target.name]: event.target.value });
+    setIngredient({ ...ingredient, [event.target.name]: event.target.value });
 
   const handleImage = (event) =>
-    setCategory({ ...category, image: event.target.files[0] });
+    setIngredient({ ...ingredient, image: event.target.files[0] });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (foundCategory) dispatch(updateCategory(category));
-    else dispatch(addCategory(category));
-    history.push("/categories");
+    if (foundIngredient) dispatch(updateIngredient(ingredient));
+    else dispatch(addIngredient(ingredient));
+    history.push("/ingredients");
   };
 
   return (
     <form className="container" onSubmit={handleSubmit}>
-      <h1>{foundCategory ? "Update" : "Create"} Category</h1>
+      <h1>{foundIngredient ? "Update" : "Create"} Ingredient</h1>
       <div className="mb-3">
         <label className="form-label">Name</label>
         <input
           type="text"
-          value={category.name}
+          value={ingredient.name}
           onChange={handleChange}
           name="name"
           className="form-control"
@@ -51,17 +54,17 @@ const CategoryForm = () => {
         <label className="form-label">Image</label>
         <input
           type="file"
-          // value={category.image}
+          // value={ingredient.image}
           onChange={handleImage}
           name="image"
           className="form-control"
         />
       </div>
       <button type="submit" className="btn btn-info float-right">
-        {foundCategory ? "Update" : "Create"}
+        {foundIngredient ? "Update" : "Create"}
       </button>
     </form>
   );
 };
 
-export default CategoryForm;
+export default IngredientForm;
