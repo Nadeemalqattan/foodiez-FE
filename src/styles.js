@@ -10,6 +10,13 @@ export const HomeImage = styled.img`
   margin-right: auto;
   width: 50%;
 `;
+export const Logo = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+`;
+
 export const Description = styled.h2`
   text-align: center;
 `;
