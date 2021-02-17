@@ -4,14 +4,14 @@ const initialState = {
   category: [], //categoryData,
 };
 
-const categoryReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_CATEGORY:
-      const { newCAtegory } = action.payload;
+      const { newCategory } = action.payload;
 
       return {
         ...state,
-        category: [...state.category, newCAtegory],
+        category: [...state.category, newCategory],
       };
     case types.DELETE_CATEGORY:
       return {
@@ -21,11 +21,11 @@ const categoryReducer = (state = initialState, action) => {
         ),
       };
     case types.UPDATE_CATEGORY:
-      const { updatedCAtegory } = action.payload;
+      const { updatedCategory } = action.payload;
       return {
         ...state,
         category: state.category.map((category) =>
-          category.id === updatedCAtegory.id ? updatedCAtegory : category
+          category.id === updatedCategory.id ? updatedCategory : category
         ),
       };
     case types.FETCH_CATEGORY:
@@ -35,4 +35,4 @@ const categoryReducer = (state = initialState, action) => {
   }
 };
 
-export default categoryReducer;
+export default reducer;

@@ -1,14 +1,18 @@
 import "./App.css";
 import Home from "./components/Home";
 import { Route, Switch } from "react-router";
-import CategorieList from "./components/CategorieList";
+import CategoryList from "./components/CategoryList";
+import CategoryForm from "./components/CategoryForm";
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/categorie">
-          <CategorieList />
+        <Route path="/categories/new">
+          <CategoryForm />
+        </Route>
+        <Route path="/categories">
+          <CategoryList />
         </Route>
         <Route>
           <Home path="/" />

@@ -17,6 +17,22 @@ export const addCategory = (newCategory) => async (dispatch) => {
   }
 };
 
+export const updateCategory = (updatedCategory) => async (dispatch) => {
+  try {
+    const formData = new FormData();
+    for (const key in updatedCategory)
+      formData.append(key, updatedCategory[key]);
+    const res = await instance.put(`/data/${updatedCategory.id}`, formData);
+
+    dispatch({
+      type: types.UPDATE_CATEGORY,
+      payload: { updatedCategory: res.data },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const fetchCategories = () => {
   return async (dispatch) => {
     try {
