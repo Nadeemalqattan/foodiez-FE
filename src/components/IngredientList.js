@@ -17,10 +17,12 @@ const IngredientList = (props) => {
   ));
   return (
     <ListWrapper>
-      <Link to="/ingredients/new">
-        <BsFillPlusSquareFill />
-      </Link>
+      <h1>Food Ingredients</h1>
+      <br />
       {ingredientList}
+      <Link to="/ingredients/new">
+        <BsFillPlusSquareFill size="2em" />
+      </Link>
     </ListWrapper>
   );
 };

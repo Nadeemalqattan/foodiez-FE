@@ -1,5 +1,5 @@
 // Styling
-import { ItemWrapper } from "../styles";
+import { ItemWrapper, Imagecard } from "../styles";
 
 import { Link } from "react-router-dom";
 
@@ -8,9 +8,9 @@ const CategoryItem = (props) => {
   return (
     <ItemWrapper>
       <Link to={`/categories/${category.slug}`}>
-        <img alt={category.name} src={category.image} />
+        <Imagecard alt={category.name} src={category.image} />
       </Link>
-      <p>{category.name}</p>
+      <h3>{category.name}</h3>
     </ItemWrapper>
   );
 };

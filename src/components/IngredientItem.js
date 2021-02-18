@@ -1,5 +1,5 @@
 // Styling
-import { ItemWrapper } from "../styles";
+import { ItemWrapper, Imagecard } from "../styles";
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const IngredientItem = (props) => {
   return (
     <ItemWrapper>
       <Link to={`/ingredients/${ingredient.slug}`}>
-        <img alt={ingredient.name} src={ingredient.image} />
+        <Imagecard alt={ingredient.name} src={ingredient.image} />
       </Link>
       <p>{ingredient.name}</p>
     </ItemWrapper>

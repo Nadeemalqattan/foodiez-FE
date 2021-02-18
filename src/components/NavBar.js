@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "./images/logo.gif";
 
 import { Logo } from "../styles";
 
@@ -7,10 +8,7 @@ const NavBar = () => {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <Link to="/">
-          <Logo
-            alt="Foodiez"
-            src="https://i.pinimg.com/originals/30/7e/81/307e8154e87ffc5d2f823cd50b174dee.gif"
-          />
+          <Logo alt="Foodiez" src={logo} />
         </Link>
         <button
           class="navbar-toggler"

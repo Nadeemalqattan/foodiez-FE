@@ -8,8 +8,8 @@ export const addIngredient = (newIngredient) => async (dispatch) => {
     const formData = new FormData();
     for (const key in newIngredient) formData.append(key, newIngredient[key]);
     const res = await instance.post(
-      "/ingredients",
-      // `/categories/${newIngredient.categoryId}/ingredients`,
+      // "/ingredients",
+      `/categories/${newIngredient.categoryId}/ingredients`,
       formData
     );
     dispatch({

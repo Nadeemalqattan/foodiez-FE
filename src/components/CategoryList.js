@@ -15,10 +15,12 @@ const CategoryList = (props) => {
   ));
   return (
     <ListWrapper>
-      <Link to="/categories/new">
-        <BsFillPlusSquareFill />
-      </Link>
+      <h1>Food Categories</h1>
+      <br />
       {categoryList}
+      <Link to="/categories/new">
+        <BsFillPlusSquareFill size="2em" />
+      </Link>
     </ListWrapper>
   );
 };
