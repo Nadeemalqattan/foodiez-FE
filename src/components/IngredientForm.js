@@ -9,7 +9,7 @@ import { useState } from "react";
 const IngredientForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { ingredientSlug } = useParams();
+  const { ingredientSlug, categoryId } = useParams();
   const foundIngredient = useSelector((state) =>
     state.ingredientReducer.ingredient.find(
       (ingredient) => ingredient.slug === ingredientSlug
@@ -18,6 +18,7 @@ const IngredientForm = () => {
 
   const [ingredient, setIngredient] = useState(
     foundIngredient ?? {
+      categoryId: categoryId,
       name: "",
       image: "",
     }

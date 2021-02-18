@@ -14,14 +14,15 @@ const CategoryList = (props) => {
     <CategoryItem category={category} key={category.id} />
   ));
   return (
-    <ListWrapper>
+    <div>
       <h1>Food Categories</h1>
-      <br />
-      {categoryList}
-      <Link to="/categories/new">
-        <BsFillPlusSquareFill size="2em" />
-      </Link>
-    </ListWrapper>
+      <ListWrapper>
+        {categoryList}
+        <Link to="/categories/new">
+          <BsFillPlusSquareFill size="2em" />
+        </Link>
+      </ListWrapper>
+    </div>
   );
 };
 

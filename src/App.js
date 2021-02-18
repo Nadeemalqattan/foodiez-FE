@@ -6,6 +6,9 @@ import CategoryForm from "./components/CategoryForm";
 import CategoryDetail from "./components/CategoryDetail";
 import IngredientList from "./components/IngredientList";
 import IngredientForm from "./components/IngredientForm";
+import IngredientDetail from "./components/IngredientDetail";
+import RecipeDetail from "./components/RecipeDetail";
+import RecipeList from "./components/RecipeList";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -13,15 +16,24 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route path="/categories/:categorySlug">
-          <CategoryDetail />
+        <Route
+          path={["/categories/:categoryId/ingredients/new", "/ingredients/new"]}
+        >
+          <IngredientForm />
         </Route>
         <Route path="/categories/new">
           <CategoryForm />
         </Route>
-        <Route path="/ingredients/new">
-          <IngredientForm />
+        <Route path="/categories/:categorySlug">
+          <CategoryDetail />
         </Route>
+        <Route path="/ingredients/:ingredientSlug">
+          <IngredientDetail />
+        </Route>
+        <Route path="/recipe">
+          <RecipeList />
+        </Route>
+
         <Route path="/ingredients">
           <IngredientList />
         </Route>

@@ -4,11 +4,11 @@ import * as types from "./types";
 
 // ACTIONS
 export const addIngredient = (newIngredient) => async (dispatch) => {
+  console.log(newIngredient);
   try {
     const formData = new FormData();
     for (const key in newIngredient) formData.append(key, newIngredient[key]);
     const res = await instance.post(
-      // "/ingredients",
       `/categories/${newIngredient.categoryId}/ingredients`,
       formData
     );

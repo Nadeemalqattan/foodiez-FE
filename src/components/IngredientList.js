@@ -16,14 +16,15 @@ const IngredientList = (props) => {
     <IngredientItem ingredient={ingredient} key={ingredient.id} />
   ));
   return (
-    <ListWrapper>
+    <div>
       <h1>Food Ingredients</h1>
-      <br />
-      {ingredientList}
-      <Link to="/ingredients/new">
-        <BsFillPlusSquareFill size="2em" />
-      </Link>
-    </ListWrapper>
+      <ListWrapper>
+        {ingredientList}
+        <Link to="/ingredients/new">
+          <BsFillPlusSquareFill size="2em" />
+        </Link>
+      </ListWrapper>
+    </div>
   );
 };
 

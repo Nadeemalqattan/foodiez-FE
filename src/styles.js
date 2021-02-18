@@ -24,7 +24,7 @@ export const Description = styled.h2`
 export const ListWrapper = styled.div`
   align-items: center;
   justify-content: center;
-  display: block;
+  display: flex;
 `;
 export const ItemWrapper = styled.div`
   margin: 20px;
@@ -51,5 +51,5 @@ export const Imagecard = styled.img`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 15px;
-  display: block;
+  display: flex;
 `;
