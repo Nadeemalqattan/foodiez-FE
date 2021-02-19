@@ -38,6 +38,11 @@ const NavBar = () => {
                 Ingredients
               </Link>
             </li>
+            <li class="nav-item">
+              <Link to="/recipes" class="nav-link">
+                Recipes
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -13,6 +13,7 @@ const RecipeList = (props) => {
   const recipeList = recipes.map((recipe) => (
     <RecipeItem recipe={recipe} key={recipe.id} />
   ));
+  console.log("whatever");
   return (
     <div>
       <h1>Food Recipes</h1>

@@ -30,7 +30,7 @@ function App() {
         <Route path="/ingredients/:ingredientSlug">
           <IngredientDetail />
         </Route>
-        <Route path="/recipe">
+        <Route path="/recipes">
           <RecipeList />
         </Route>
 

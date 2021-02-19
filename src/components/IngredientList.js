@@ -16,7 +16,7 @@ const IngredientList = (props) => {
     <IngredientItem ingredient={ingredient} key={ingredient.id} />
   ));
   return (
-    <div>
+    <div className="container">
       <h1>Food Ingredients</h1>
       <ListWrapper>
         {ingredientList}
