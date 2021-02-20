@@ -30,13 +30,13 @@ function App() {
         <Route path="/ingredients/:ingredientSlug">
           <IngredientDetail />
         </Route>
+        <Route path="/ingredients">
+          <IngredientList />
+        </Route>
         <Route path="/recipes">
           <RecipeList />
         </Route>
 
-        <Route path="/ingredients">
-          <IngredientList />
-        </Route>
         <Route path="/categories">
           <CategoryList />
         </Route>

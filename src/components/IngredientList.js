@@ -8,19 +8,21 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const IngredientList = (props) => {
-  let [id, setId] = useState([]);
+const IngredientList = ({ ingredients }) => {
+  let [id, setId] = useState(false);
+
+  // const ingredients = useSelector(
+  //   (state) => state.ingredientReducer.ingredient
+  // );
+
   let ings = [];
-  ings.push(id);
-  console.log(ings);
-  const ingredients = useSelector(
-    (state) => state.ingredientReducer.ingredient
-  );
+  ings.push(ingredients.id);
+
   const ingredientList = ingredients.map((ingredient) => (
     <IngredientItem ingredient={ingredient} key={ingredient.id} setId={setId} />
   ));
   return (
-    <div className="container">
+    <div>
       <h1>Food Ingredients</h1>
       <ListWrapper>
         {ingredientList}
