@@ -9,7 +9,8 @@ export const addRecipe = (newRecipe) => async (dispatch) => {
     const formData = new FormData();
     for (const key in newRecipe) formData.append(key, newRecipe[key]);
     const res = await instance.post(
-      `/ingredients/${newRecipe.ingredientId}/recipes`,
+      "/recipes",
+      // `/ingredients/${newRecipe.ingredientId}/recipes`,
       formData
     );
     dispatch({

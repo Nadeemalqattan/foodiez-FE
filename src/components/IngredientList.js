@@ -7,28 +7,31 @@ import IngredientItem from "./IngredientItem";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import RecipeForm from "./RecipeForm";
 
 const IngredientList = ({ ingredients }) => {
-  let [id, setId] = useState(false);
-
-  // const ingredients = useSelector(
-  //   (state) => state.ingredientReducer.ingredient
-  // );
-
-  let ings = [];
-  ings.push(ingredients.id);
+  let [id, setId] = useState([]);
+  console.log(id);
 
   const ingredientList = ingredients.map((ingredient) => (
     <IngredientItem ingredient={ingredient} key={ingredient.id} setId={setId} />
   ));
+
   return (
     <div>
       <h1>Food Ingredients</h1>
       <ListWrapper>
         {ingredientList}
-        {/* <Link to="/ingredients/new">
-          <BsFillPlusSquareFill size="2em" />
-        </Link> */}
+        {id.length >= 1 ? (
+          <>
+            <Link to="/recipes/new">
+              <BsFillPlusSquareFill size="2em" />
+            </Link>
+            <RecipeForm id={id} />
+          </>
+        ) : (
+          ""
+        )}
       </ListWrapper>
     </div>
   );

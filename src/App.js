@@ -9,9 +9,18 @@ import IngredientForm from "./components/IngredientForm";
 import IngredientDetail from "./components/IngredientDetail";
 import RecipeDetail from "./components/RecipeDetail";
 import RecipeList from "./components/RecipeList";
+import RecipeForm from "./components/RecipeForm";
 import NavBar from "./components/NavBar";
 
+import { useSelector } from "react-redux";
+
 function App() {
+  const ingredients = useSelector(
+    (state) => state.ingredientReducer.ingredient
+  );
+
+  const recipes = useSelector((state) => state.recipeReducer.recipe);
+
   return (
     <div className="App">
       <NavBar />
@@ -21,8 +30,14 @@ function App() {
         >
           <IngredientForm />
         </Route>
+        <Route path="/recipes/new">
+          <RecipeForm />
+        </Route>
         <Route path="/categories/new">
           <CategoryForm />
+        </Route>
+        <Route path="/recipes/:recipeSlug">
+          <RecipeDetail />
         </Route>
         <Route path="/categories/:categorySlug">
           <CategoryDetail />
@@ -31,10 +46,10 @@ function App() {
           <IngredientDetail />
         </Route>
         <Route path="/ingredients">
-          <IngredientList />
+          <IngredientList ingredients={ingredients} />
         </Route>
         <Route path="/recipes">
-          <RecipeList />
+          <RecipeList recipes={recipes} />
         </Route>
 
         <Route path="/categories">

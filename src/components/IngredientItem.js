@@ -25,7 +25,9 @@ const IngredientItem = (props) => {
           <ItemWrapper>
             <div class="form-check">
               <input
-                onClick={() => props.setId(ingredient.id)}
+                onClick={() =>
+                  props.setId((array) => [...array, ingredient.id])
+                }
                 class="form-check-input"
                 type="checkbox"
                 value=""
