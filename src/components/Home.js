@@ -1,14 +1,17 @@
-import { Description, HomeImage } from "../styles";
+import { HomeText, HomeImage, HomeTB } from "../styles";
+import homepage from "./images/homepage.jpg";
 
 const Home = () => {
   return (
-    <>
-      <HomeImage
-        alt="Foodiez"
-        src="https://i.pinimg.com/originals/30/7e/81/307e8154e87ffc5d2f823cd50b174dee.gif"
-      />
-      <Description>Where the best recipes gather</Description>
-    </>
+    <div class="container-md">
+      <HomeImage alt="Foodiez" src={homepage} />
+      <HomeText>
+        Where the best
+        <br />
+        recipes gather
+      </HomeText>
+      <HomeTB>Find out different categories</HomeTB>
+    </div>
   );
 };
 
