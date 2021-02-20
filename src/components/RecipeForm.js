@@ -13,8 +13,7 @@ const RecipeForm = ({ id }) => {
 
   const [recipe, setRecipe] = useState(
     foundRecipe ?? {
-      ingredientId: id,
-
+      ingredients: id,
       name: "",
       image: "",
       description: "",
@@ -47,7 +46,7 @@ const RecipeForm = ({ id }) => {
           className="form-control"
         />
       </div>
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <label className="form-label">Ingredients</label>
         <input
           type="text"
@@ -56,7 +55,7 @@ const RecipeForm = ({ id }) => {
           name="id"
           className="form-control"
         />
-      </div>
+      </div> */}
       <div className="mb-3">
         <label className="form-label">Description</label>
         <input
