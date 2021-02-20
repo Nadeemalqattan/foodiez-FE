@@ -22,7 +22,7 @@ const IngredientList = ({ ingredients }) => {
       <h1>Food Ingredients</h1>
       <ListWrapper>
         {ingredientList}
-        {id.length > 1 ? (
+        {id.length >= 1 ? (
           <>
             {/* <Link to="/recipes/new">
               <BsFillPlusSquareFill size="2em" />
