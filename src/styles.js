@@ -1,14 +1,29 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 //Home styling
 export const Title = styled.h1`
   text-align: center;
 `;
 export const HomeImage = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  position: fixed;
+  right: 0;
+  width: 500px;
+`;
+export const HomeText = styled.h1`
+  position: absolute;
+  top: 7em;
+  left: 2em;
+  color: #85d28e;
+  p {
+    color: #1e535f;
+  }
+`;
+export const HomeTB = styled.p`
+  position: absolute;
+  top: 24em;
+  left: 7.1em;
+  color: #1e535f;
 `;
 export const Logo = styled.img`
   display: block;
@@ -52,4 +67,10 @@ export const Imagecard = styled.img`
   transition: 0.3s;
   border-radius: 15px;
   display: flex;
+`;
+export const NavColor = styled(Link)`
+  color: #569f87;
+  &.hover {
+    color: black;
+  }
 `;
