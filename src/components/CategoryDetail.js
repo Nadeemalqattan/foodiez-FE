@@ -23,12 +23,17 @@ const CategoryDetail = () => {
   console.log(allIngredients);
   return (
     <>
-      <h4>{category.name}</h4>
+      {" "}
       <img src={category.image} />
+      <h4>{category.name}</h4>
       <IngredientList ingredients={ingredients} />
       {/* <UpdateButton ingredients={category.ingredients} /> */}
       <Link to={`/categories/${category.id}/ingredients/new`}>
-        <BsFillPlusSquareFill className="float-right" size="2em" />
+        <BsFillPlusSquareFill
+          color="#85d28e"
+          className="float-center"
+          size="2em"
+        />
       </Link>
     </>
   );

@@ -76,7 +76,7 @@ const RecipeForm = ({ id }) => {
           className="form-control"
         />
       </div>
-      <button type="submit" className="btn btn-info float-right">
+      <button type="submit" className="btn btn-dark float-right">
         {foundRecipe ? "Update" : "Create"}
       </button>
     </form>

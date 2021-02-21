@@ -19,7 +19,6 @@ const IngredientItem = (props) => {
 
   return (
     <div>
-      {/* {ingredients} */}
       <div class="row">
         <div>
           <ItemWrapper>
@@ -34,11 +33,17 @@ const IngredientItem = (props) => {
                 id="flexCheckDefault"
               />
               <Link to={`/ingredients/${ingredient.slug}`}>
-                <Imagecard alt={ingredient.name} src={ingredient.image} />
+                <img
+                  alt={ingredient.name}
+                  src={ingredient.image}
+                  class="card-img-top"
+                />
               </Link>
               <label class="form-check-label" for="flexCheckDefault"></label>
             </div>
-            <p>{ingredient.name}</p>
+            <div class="card-body">
+              <h5 class="card-title text-center">{ingredient.name}</h5>
+            </div>
           </ItemWrapper>
         </div>
       </div>

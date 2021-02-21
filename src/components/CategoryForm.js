@@ -57,7 +57,7 @@ const CategoryForm = () => {
           className="form-control"
         />
       </div>
-      <button type="submit" className="btn btn-info float-right">
+      <button type="submit" className="btn btn-dark float-right">
         {foundCategory ? "Update" : "Create"}
       </button>
     </form>

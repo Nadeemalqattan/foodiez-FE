@@ -10,7 +10,7 @@ const Home = () => {
         <br />
         recipes gather
       </HomeText>
-      <HomeTB>Find out different categories</HomeTB>
+      <HomeTB>Find out our different categories</HomeTB>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const IngredientDetail = () => {
 
   if (!ingredient) return <Redirect to="/ingredients" />;
 
-  const recipes = ingredient.recipe.map((recipe) =>
+  const recipes = ingredient.recipes.map((recipe) =>
     allRecipes.find((_recipe) => _recipe.id === recipe.id)
   );
   return (

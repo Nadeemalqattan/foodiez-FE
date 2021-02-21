@@ -15,14 +15,13 @@ const RecipeList = ({ recipes }) => {
   ));
   console.log("whatever");
   return (
-    <div>
-      <h1>Food Recipes</h1>
-      <ListWrapper>
-        {recipeList}
-        <Link to="/recipes/new">
-          <BsFillPlusSquareFill size="2em" />
-        </Link>
-      </ListWrapper>
+    <div class="container-md">
+      <h2>Food Recipes</h2>
+      <div class="card-deck">{recipeList}</div>
+
+      <Link to="/recipes/new">
+        <BsFillPlusSquareFill size="2em" color="#85d28e" />
+      </Link>
     </div>
   );
 };

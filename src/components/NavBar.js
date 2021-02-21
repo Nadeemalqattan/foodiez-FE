@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "./images/logo.gif";
+import logo from "./images/logo.png";
 
 import { Logo, NavColor } from "../styles";
 

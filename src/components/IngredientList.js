@@ -18,21 +18,19 @@ const IngredientList = ({ ingredients }) => {
   ));
 
   return (
-    <div>
-      <h1>Food Ingredients</h1>
-      <ListWrapper>
-        {ingredientList}
-        {id.length >= 1 ? (
-          <>
-            {/* <Link to="/recipes/new">
+    <div class="container-md">
+      <h2>Food Ingredients</h2>
+      <div class="card-deck">{ingredientList}</div>
+      {id.length >= 1 ? (
+        <>
+          {/* <Link to="/recipes/new">
               <BsFillPlusSquareFill size="2em" />
             </Link> */}
-            <RecipeForm id={id} />
-          </>
-        ) : (
-          ""
-        )}
-      </ListWrapper>
+          <RecipeForm id={id} />
+        </>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

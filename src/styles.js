@@ -22,7 +22,7 @@ export const HomeText = styled.h1`
 export const HomeTB = styled.p`
   position: absolute;
   top: 24em;
-  left: 7.1em;
+  left: 6.1em;
   color: #1e535f;
 `;
 export const Logo = styled.img`
@@ -39,14 +39,14 @@ export const Description = styled.h2`
 export const ListWrapper = styled.div`
   align-items: center;
   justify-content: center;
-  display: flex;
+  display: block;
 `;
 export const ItemWrapper = styled.div`
   margin: 20px;
-
+  align-items: center;
   img {
-    width: 200px;
-    height: 200px;
+    width: 110px;
+    height: 110px;
   }
 
   p {
@@ -61,10 +61,12 @@ export const ItemWrapper = styled.div`
     margin: 5px;
   }
 `;
-
+export const CardDiv = styled.div`
+  maxwidth: 100px;
+`;
 export const Imagecard = styled.img`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  transition: 20s;
   border-radius: 15px;
   display: flex;
 `;

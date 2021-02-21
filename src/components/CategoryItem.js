@@ -7,10 +7,14 @@ const CategoryItem = (props) => {
   const category = props.category;
   return (
     <ItemWrapper>
-      <Link to={`/categories/${category.slug}`}>
-        <Imagecard alt={category.name} src={category.image} />
-      </Link>
-      <h3>{category.name}</h3>
+      <div>
+        <Link to={`/categories/${category.slug}`}>
+          <img alt={category.name} src={category.image} class="card-img-top" />
+        </Link>
+        <div class="card-body">
+          <h4 class="card-title text-center">{category.name}</h4>
+        </div>
+      </div>
     </ItemWrapper>
   );
 };

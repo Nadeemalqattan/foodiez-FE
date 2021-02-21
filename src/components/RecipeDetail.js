@@ -26,8 +26,12 @@ const RecipeDetail = () => {
   );
   return (
     <>
-      <h1>{recipe.name}</h1>
+      <h2>{recipe.name}</h2>
       <img src={recipe.image} alt={recipe.name} />
+      <br />
+      <br />
+      <h3>{recipe.description}</h3>
+      <hr />
       <IngredientList ingredients={ingredients} />
       {/* <UpdateButton slug={recipe.slug} />
       <DeleteButton recipeId={recipe.id} /> */}
